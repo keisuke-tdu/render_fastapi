@@ -51,9 +51,9 @@ def index():
     return HTMLResponse(content=html_content, status_code=200)
 @app.post("/present")
 async def givepresent(present):
-    givepresent_list = [
-        "グー",
-        "チョキ",
-        "パー"
-    ]
+          givepresent_list = [
+            "グー",
+            "チョキ",
+            "パー"
+            ]
           return {"response": f"サーバです。ジャンケンしましょ！ {present}ありがとう。私の手は{givepresent_list[random.randrange(3)]}です"}  # f文字列というPythonの機能を使っている
