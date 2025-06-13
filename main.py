@@ -35,16 +35,25 @@ def omikuji():
 @app.get("/index")
 def index():
     html_content = """
-    <html>
+    <!DOCTYPE html>
+　　<html lang="ja">
         <head>
-            <title>Some HTML in here</title>
+        　<meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Pythonたいへんだそん</title>
         </head>
-        <body>
-            <h1>Look ma! HTML!</h1>
-        </body>
+    <body>
+    <h1>基本情報受かりたい</h1>
+    <p>目指せ後二日で巻き返し</p>
+    </body>
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
 @app.post("/present")
-async def give_present(present):
-          return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。"}  # f文字列というPythonの機能を使っている
+async def givepresent(present):
+    givepresent_list = [
+        "グー",
+        "チョキ",
+        "パー"
+    ]
+          return {"response": f"サーバです。ジャンケンしましょ！ {present}ありがとう。私の手は{givepresent_list[random.randrange(3)]}です"}  # f文字列というPythonの機能を使っている
