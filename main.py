@@ -2,7 +2,7 @@ from typing import Optional
 
 from fastapi import FastAPI
 
-import random
+import random  # randomライブラリを追加
 
 app = FastAPI()
 
@@ -14,6 +14,7 @@ async def root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
     return {"item_id": item_id, "q": q}
+
 @app.get("/omikuji")
 def omikuji():
     omikuji_list = [
@@ -28,5 +29,4 @@ def omikuji():
         "小凶",
         "大凶"
     ]
-
-return {"result" : omikuji_list[random.randrange(10)]}
+    return {"result" : omikuji_list[random.randrange(10)]}
