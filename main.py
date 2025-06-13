@@ -56,4 +56,4 @@ async def givepresent(zyanken):
             "チョキ",
             "パー"
             ]
-          return {"response": f"サーバです。ジャンケンしましょ！ {present}ありがとう。私の手は{givepresent_list[random.randrange(3)]}です"}  # f文字列というPythonの機能を使っている
+          return {"response": f"サーバです。ジャンケンしましょ！ {zyanken}ありがとう。私の手は{givepresent_list[random.randrange(3)]}です"}  # f文字列というPythonの機能を使っている
