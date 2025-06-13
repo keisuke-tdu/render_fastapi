@@ -49,8 +49,8 @@ def index():
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
-@app.post("/present")
-async def givepresent(present):
+@app.post("/zyanken")
+async def givepresent(zyanken):
           givepresent_list = [
             "グー",
             "チョキ",
